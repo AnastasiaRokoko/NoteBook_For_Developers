@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Frontend from "./components/Frontend";
+import Backend from "./components/Backend";
+import Designer from "./components/Designer";
+import Manager from "./components/Manager";
+import { motion } from "framer-motion";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="navbar">
+        <Link to="/frontend" className="link">
+          Frontend
+        </Link>
+        <Link to="/backend" className="link">
+          Backend
+        </Link>
+        <Link to="/designer" className="link">
+          Designer
+        </Link>
+        <Link to="/manager" className="link">
+          Manager
+        </Link>
+      </div>
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <h1>Добро пожаловать!</h1>
+              <p>Выберите раздел в навигации.</p>
+            </motion.div>
+          }
+        />
+
+        <Route path="/frontend" element={<Frontend />} />
+        <Route path="/backend" element={<Backend />} />
+        <Route path="/designer" element={<Designer />} />
+        <Route path="/manager" element={<Manager />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

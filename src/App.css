@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+h1,p{
+  text-align: center;
+}
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +38,62 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+.inputContainer {
+  display: flex;
+  margin-bottom: 20px;
+}
+.input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.list {
+  list-style: none;
+  padding: 0;
+}
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.deleteButton{
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+.link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 18px;
 }
